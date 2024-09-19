@@ -1,0 +1,63 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.sales
+
+<div>
+    <h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown"> Sales Details</h2>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerNumber) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerNumber)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductId) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.payment) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.price) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<br />
+<p style="margin-left:4%;color:dodgerblue">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    <a href="/sales/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Sales details</a>
+</p>

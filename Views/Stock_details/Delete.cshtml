@@ -1,0 +1,61 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Stock
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the Stock </h4>
+<br />
+<div>
+    <hr />
+    Are you sure you want to delete stock  @Html.DisplayFor(model => model.category) ?
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.category_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.category) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.type) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.price) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a href="/Stock_details/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Stock details</a>
+</div>
+    }
+</div>

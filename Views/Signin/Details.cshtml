@@ -1,0 +1,83 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Login
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown">     @Html.DisplayFor(model => model.Name) Details</h2>
+<hr />
+<br />
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.user_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.phone_no) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone_no)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.place) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.place)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.gender) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.email) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.password) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.cpassword) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpassword)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <br /> <br />
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    <a href="/Signin/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to employe details</a>
+</p>

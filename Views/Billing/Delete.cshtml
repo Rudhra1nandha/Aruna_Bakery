@@ -1,0 +1,68 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Billing
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the Order </h4>
+
+<div>
+    <hr />
+    <h4> Are you  want to delete this Billing Data?</h4>    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_number) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_number)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.product_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.bill_date) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bill_date)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.gst) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gst)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.discount) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.discount)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.total_payment) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_payment)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br /><br />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/Billing/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Billing details</a>
+        </div>
+    }
+</div>

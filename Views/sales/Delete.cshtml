@@ -1,0 +1,70 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.sales
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the sale </h4>
+
+<div>
+    <hr />
+    Are you sure you want to delete the Sale?
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerNumber) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerNumber)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductId) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.payment) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.price) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br />
+        <br />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/sales/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Sales details</a>
+        </div>
+    }
+</div>

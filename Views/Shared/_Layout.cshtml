@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Aruna Bakery Application</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="~/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="~/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    @*nav bar*@
+    <header class="top">
+        <div class="fixedArea">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 noPadding">
+                    <div class="content-wrapper one">
+                        <header class="header">
+                            <nav class="navbar navbar-default myNavBar">
+                                <div class="container">
+                                    <div class="navbar-header">
+                                        <div class="row">
+                                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-xs-3 col-sm-3">
+                                                        <a style="padding-top:0px;margin-left:-20%" class="navbar-brand navBrandText text-uppercase font-weight-bold" href="#section1"><img src="~/img/logo/cemrebakerylogo.png" alt="restorant" /></a>
+
+                                                    </div>
+                                                    <div class="col-md-9 col-sm-9 col-xs-9">
+                                                        @* <a href="index.html"><img class="img-responsive logo" src="~/img/logo/cemrebakerytextlogolight.png" alt="restorant" /></a>*@
+                                                        <p style="font-size:15px;font-weight:800;margin-left:10%; margin-top:10%;color:white">Aruna <span style="color:gold">Bakery</span></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right navBar">
+                                            <li class="nav-item"><a href="#section0" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home <span class="sr-only">(current)</span></a></li>
+                                            <li class="nav-item"><a href="#section2"class="nav-link text-uppercase font-weight-bold js-scroll-trigger">About</a></li>
+                                            <li class="nav-item"><a href="#section3" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Portfolio</a></li>
+                                            <li class="nav-item"><a href="#section4" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Testimonial</a></li>
+                                            <li class="nav-item"><a href="#section5" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Blog</a></li>
+                                            <li class="nav-item"><a href="#section7" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Address</a></li>
+                                            <li class="nav-item"><a href="/Feedback/Create" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Feedback</a></li>
+                                            <li class="nav-item"><a href="/Signin/Sign_in" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">SignIn</a></li>
+                                            <li class="nav-item"><a href="/Orders/Logout" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">SignOut</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </header>
+                        @*Main Menu End*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @*Header Area End
+        Section0 Area Start*@
+    <section id="section0" class="slider-area">
+        <div class="main-slider owl-theme owl-carousel">
+           
+            <div class="single-slide item" style="background-image: url(/img/slider/1900x1000.png)">
+                <div class="slider-content-area">
+                    <div class="row">
+                        <div class="slide-content-wrapper text-center">
+                            <div class="slide-content">
+                                <img class="classic" src="~/img/logo/cemrebakerylogo.png">
+                                <h3 style="color:rgb(245, 245, 245)">BAKERY MAKES </h3>
+                                <h2>A Taste Of  The Good Life</h2>
+                                <p style="color:rgb(249, 245, 245);">Sweet Delight, Guaranteed to make you Smile. bake a world a better place.</p>
+                                <a class="default-btn" href="about.html">Learn more</a>
+                                <img class="classic" src="~/img/new/icon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class="single-slide item" style="background-image: url(/img/slider/asdf.jpg)">
+                <img src="img/slider/bakery.jpg">
+           
+                <div class="slider-content-area">
+                    <div class="row">
+                        <div class="slide-content-wrapper text-center">
+                            <div class="slide-content">
+                                <img class="classic" src="~/img/logo/cemrebakerylogo.png">
+                                <h3>BAKERY MAKES </h3>
+                                <h2>A Taste Of  The Good Life</h2>
+                                <p>Satification Baked Fresh Daily</p>
+                                <a class="default-btn" href="about.html">Learn more</a>
+                                <img class="classic" src="~/img/new/icon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+           
+            <div class="single-slide item" style="background-image: url(/img/slider/qwertyqw.png)">
+                <img src="img/slider/bakery.jpg">
+              
+                <div class="slider-content-area">
+                    <div class="row">
+                        <div class="slide-content-wrapper text-center">
+                            <div class="slide-content">
+                                <img class="classic" src="~/img/logo/cemrebakerylogo.png">
+                                <h3>BAKERY MAKES </h3>
+                                <h2>A Taste Of  The Good Life</h2>
+                                <p>Bake it, Bake it, Make it your Own.</p>
+                                <a class="default-btn" href="about.html">Learn more</a>
+                                <img class="classic" src="~/img/new/icon.png">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                Start Slider Content
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="~/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/parallax.min.js"></script>
+    <script src="~/js/ajax-mail.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.nicescroll.min.js"></script>
+    <script src="~/js/main.js"></script>
+    @*<script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyIMWhs-crjT0yhctbRjfJFq75FlEhSzE&callback=initMap">
+    </script>*@
+</body>
+</html>

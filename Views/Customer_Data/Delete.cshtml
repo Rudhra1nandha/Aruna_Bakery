@@ -1,0 +1,52 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Customer_Data
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the Customer </h4>
+<div>
+    <hr />
+    <h4> Are you  want to delete the order: @Html.DisplayFor(model => model.Customer_Name) </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_Number) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_Number)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Location) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br /><br />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/Customer_Data/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Customer details</a>
+        </div>
+    }
+</div>

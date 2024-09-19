@@ -1,0 +1,88 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Login
+
+<div>
+    <h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown">Sure Want to delete the User ?</h4>
+    <hr />
+    <h3>
+        Are you sure you want to delete user @Html.DisplayFor(model => model.Name) ?
+    </h3>
+    <hr />
+    <br />
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.user_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.phone_no):
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone_no)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.place) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.place)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.gender) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.email) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.password) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.cpassword) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpassword)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br /> <br />
+               <div class="form-actions no-color">
+                   <input type="submit" value="Delete" class="btn btn-danger" /> |
+                   <a href="/Signin/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to employe details</a>
+               </div>
+    }
+</div>

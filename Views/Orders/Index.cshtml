@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Aruna_Bakery_WithoutEntity.Models.Orders>
+
+
+<h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown">Welcome to Aruna Bakery <br /> <p>Orders Details</p></h2>
+<br />
+<h4 style="color:darkolivegreen">Welcome back @ViewBag.LoggedinuserEmp </h4>
+<h4 style="text-align:right">@Html.ActionLink("Logout","Logout")</h4>
+<hr />
+<div style="text-align:center">
+    <a href="/Billing/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;margin-left:3%">Billing</a>
+    <a href="/Customer_data/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%">Go to Customer details</a>
+    </div>
+<hr /><br />
+    <a href="/Orders/Create" style="color:green;font-weight:800;font-size:20px;text-align:right">Add a New Order </a>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.order_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customer_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.delivery_date)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.order_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.customer_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantity)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.delivery_date)
+                </td>
+                <td style="margin-left:4%;color:dodgerblue">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>

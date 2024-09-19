@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Aruna_Bakery_WithoutEntity.Models.Login>
+
+@{
+    ViewBag.Title = "Index";
+    if (ViewBag.sucess == true)
+    {
+        <script>alert("Login sucessfull")</script>
+
+    }
+    else if (ViewBag.sucess == false)
+    {
+        <script>alert("Invalied user")</script>
+    }
+}
+
+
+<h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown">Users Data</h2>
+<a href="/Signin/Create" style="color:green;font-weight:800;font-size:20px;text-align:right">Add Employe</a>
+@*<h2 style="font-weight:800;text-align:right">@Html.ActionLink("Create New", "Create")</h2>*@
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.place)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpassword)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.place)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpassword)
+            </td>
+            <td style="margin-left:4%;color:dodgerblue">
+                 @Html.ActionLink("Edit", "Edit", new { id = item.id })|
+                @Html.ActionLink("Details", "Details", new { id = item.id })|
+                 @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

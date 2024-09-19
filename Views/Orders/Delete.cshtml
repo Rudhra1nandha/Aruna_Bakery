@@ -1,0 +1,61 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Orders
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the Order </h4>
+<div>
+    <hr />
+    <h4> Are you  want to delete the order:@Html.DisplayFor(model => model.order_id) </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.order_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_date) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <br />
+        <br />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/Orders/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Order details</a>
+        </div>
+    }
+</div>

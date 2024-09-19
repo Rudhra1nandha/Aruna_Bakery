@@ -1,0 +1,47 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Admin
+
+<h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown"> Admin, @Html.DisplayFor(model => model.name) Details</h2>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.email) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.password) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.cpassword) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpassword)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<br />
+<p style="margin-left:6%">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    <a href="/Admin/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Admin details</a>
+</p>

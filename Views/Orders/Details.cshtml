@@ -1,0 +1,54 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Orders
+
+<div>
+    <h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown"> Order Details</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.order_id) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order_id)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_date) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_date)
+        </dd>
+
+    </dl>
+</div>
+<br /><br />
+<p style="margin-left:4%;color:dodgerblue">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    <a href="/Orders/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Order details</a>
+</p>

@@ -1,0 +1,52 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Admin
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown">Sure Want to delete the Admin  @Html.DisplayFor(model => model.name) Data?</h4>
+<hr />
+<br />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.email) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.password) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.cpassword) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpassword)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <br /><br />
+        <div class="form-actions no-color" style="margin-left:6%">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/Admin/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Admin details</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,53 @@
+﻿@model Aruna_Bakery_WithoutEntity.Models.Feedback
+
+<h4 style="text-align:center;margin-top:5%;font-size:30px;font-weight:750;color:sandybrown"> Delete the Order </h4>
+
+<div>
+    <hr />
+    <h3>Are you sure you want to delete Cutomer @Html.DisplayFor(model => model.name)'s Feedback</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.email) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Ratings) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ratings)
+        </dd>
+        <br>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment) :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <br /><br />
+              <div class="form-actions no-color">
+                  <input type="submit" value="Delete" class="btn btn-danger" /> |
+
+                  <a href="/Feedback/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;">Back to Feedbacks</a>
+              </div>
+    }
+</div>

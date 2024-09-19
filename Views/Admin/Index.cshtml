@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Aruna_Bakery_WithoutEntity.Models.Admin>
+
+
+<h2 style="text-align:center;margin-top:5%;font-size:30px;font-weight:800;color:sandybrown">Welcome to Aruna Bakery</h2>
+<br />
+<p style="text-align: center; color: darkolivegreen; font-size: 15px ">Welcome Admin @ViewBag.Loggedinuser</p>
+<h4 style="text-align:right">@Html.ActionLink("Logout", "Admin")</h4>
+
+
+<br />
+<br />
+
+<div style="text-align:center">
+    <a href="/Billing/Index" style="color:cornflowerblue;font-weight:500;font-size:15px;margin-left:3%">Billings</a>
+    <a href="/Orders/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%">New Orders</a>
+    <a href="/Customer_data/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%"> Customer details</a>
+    <a href="/sales/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%">Total product saled</a>
+    <a href="/Stock_details/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%">Stock_details</a>
+    <a href="/Signin/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%"> Employee details</a>
+    <a href="/Feedback/Index" style="color: cornflowerblue; font-weight: 500; font-size: 15px; margin-left: 3%">Feedbacks</a>
+
+    <hr />
+    <br />
+    <a href="/Admin/Create" style="color:green;font-weight:800;font-size:20px;text-align:right">Add New Admin</a>
+
+    <br />
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpassword)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cpassword)
+                </td>
+                <td style="margin-left:4%;color:dodgerblue">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+    <hr />
+    <br />
